@@ -1,3 +1,14 @@
+#### best solution
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+         
+        final_max_sum = nums[0]
+        current_max_sum = nums[0]
+        for i in range(1, len(nums)):
+            current_max_sum = max(nums[i], current_max_sum + nums[i])
+            final_max_sum = max(final_max_sum, current_max_sum)
+        return final_max_sum
+
 ####  Kadane’s Algorithm
 
 def maxSubArraySum(a, size):
