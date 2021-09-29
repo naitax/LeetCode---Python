@@ -1,3 +1,5 @@
+####  Kadane’s Algorithm
+
 def maxSubArraySum(a, size):
     max_so_far = a[0]
     max_ending_here = 0
@@ -51,3 +53,18 @@ def test(a, size):
     return max_value
 
 print(test(a, len(a)))
+
+
+
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        
+        max_sum = nums[0]
+        current_value = 0
+        for i in range(0, len(nums)):
+            current_value += nums[i]
+            if current_value < 0:
+                current_value = 0
+            elif current_value > max_sum:
+                max_sum = current_value
+        return max_sum
