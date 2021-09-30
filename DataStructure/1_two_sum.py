@@ -20,7 +20,7 @@ class Solution:
                     pair.append((i))
                     pair.append(hashTable[compliment])
                     foundPair = True
-            i += 0
+            i += 1
         return pair
       
  #https://medium.com/swlh/understanding-leetcode-the-two-sum-problem-6428ed5cb18d
